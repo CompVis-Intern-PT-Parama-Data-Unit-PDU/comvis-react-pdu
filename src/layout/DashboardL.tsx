@@ -26,13 +26,14 @@ export default function DashboardL({
   children: React.ReactNode;
 }) {
   const [open, setOpen] = React.useState(false);
+  
 
   return (
     <>
-      <SidebarProvider open={open} onOpenChange={setOpen} >
+      <SidebarProvider open={open} onOpenChange={setOpen}>
         <AppSidebar />
         <main className="w-full h-screen">
-          <header className="flex bg-primary h-12 align-middle text-white justify-between">
+          <header className="flex bg-primary h-[7%] align-middle text-white justify-between">
             <div className="flex space-x-2">
             <SidebarTrigger className="my-auto"/>
             <Separator orientation="vertical" className="my-auto h-6 bg-white" />

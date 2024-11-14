@@ -2,8 +2,9 @@ import { ThemeProvider } from "@/components/theme-provider";
 // import LoginForm from "./pages/AuthP"
 // import MainDP from "@/pages/DashboardMainP"
 // import CuttingDP from "@/pages/DashboardCuttingP";
-import DetailCutP from "@/pages/DetailCuttingP";
-import { Component } from "@/components/__test__";
+// import DetailCutP from "@/pages/DetailCuttingP";
+import UserManagement from "@/pages/UserManagement"
+
 
 function App() {
   return (
@@ -12,8 +13,8 @@ function App() {
         {/* <LoginForm/> */}
         {/* <MainDP/> */}
         {/* <CuttingP/> */}
-        {/* <Component/> */}
-        <DetailCutP/>
+        {/* <DetailCutP/> */}
+        <UserManagement/>
       </ThemeProvider>
     </>
   );

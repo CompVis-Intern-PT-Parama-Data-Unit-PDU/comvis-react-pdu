@@ -15,7 +15,7 @@ export default function DashboardP() {
   return (
     <>
       <DashboardL>
-        <div className="h-full flex flex-col justify-between">
+        <div className="h-[93%] flex flex-col justify-between">
         <div>
         <nav className="flex p-4 bg-sidebar justify-between align-middle">
           <h1 className="font-semibold text-lg my-auto">
