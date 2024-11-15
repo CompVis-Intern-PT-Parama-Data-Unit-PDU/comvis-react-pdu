@@ -1,12 +1,11 @@
-import DashboardL from "@/layout/DashboardL"
+
 
 export default function DashboardP() {
   return (
     <>
-    <DashboardL>
       <main>
+        Dashboard Pages
       </main>
-    </DashboardL>
     </>
   )
 }

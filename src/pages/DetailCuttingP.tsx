@@ -1,4 +1,3 @@
-import DashboardL from "@/layout/DashboardL";
 import { Download, SquareArrowLeft } from "lucide-react";
 import { VerticalChart } from "@/components/vertical-chart";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -13,7 +12,6 @@ import {
 
 export default function DetailCuttingP() {
   return (
-    <DashboardL>
       <main className="flex h-[93%] py-2 px-3 flex-wrap max-h-[93%]">
         <div className="flex flex-col w-fit max-w-min min-w-fit xl:grow max-h-full ml-auto mr-2">
           <div className="my-2">
@@ -61,6 +59,5 @@ export default function DetailCuttingP() {
         </div>
         <VerticalChart />
       </main>
-    </DashboardL>
   );
 }

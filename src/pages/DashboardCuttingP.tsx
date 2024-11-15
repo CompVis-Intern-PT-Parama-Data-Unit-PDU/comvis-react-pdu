@@ -11,10 +11,9 @@ import {
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { PagiCam } from "@/components/camera-pagination";
 
-export default function DashboardP() {
+export default function CuttingDP() {
   return (
     <>
-      <DashboardL>
         <div className="h-[93%] flex flex-col justify-between">
         <div>
         <nav className="flex p-4 bg-sidebar justify-between align-middle">
@@ -261,7 +260,6 @@ export default function DashboardP() {
           <PagiCam />
         </footer>
         </div>
-      </DashboardL>
     </>
   );
 }

@@ -29,11 +29,11 @@ import {
 
 export function TeamMembers() {
   return (
-    <Card className="h-full ml-auto">
+    <Card className="min-h-full ml-auto mr-2 border-primary">
       <CardHeader>
-        <CardTitle>Team Members</CardTitle>
+        <CardTitle className="text-2xl">Team Members</CardTitle>
         <CardDescription>
-          Invite your team members to collaborate.
+          Set user authorization as required
         </CardDescription>
       </CardHeader>
       <CardContent className="grid gap-6">
