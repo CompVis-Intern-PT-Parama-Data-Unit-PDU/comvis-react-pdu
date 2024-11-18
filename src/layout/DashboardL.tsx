@@ -13,10 +13,25 @@ import AppSidebar from "@/components/app-sidebar";
 import ModeToggle from "@/components/mode-toogle";
 import { Separator } from "@/components/ui/separator";
 import { Notif } from "@/components/notification";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
+import { nameMap } from "@/lib/pathMap";
+
 
 export default function DashboardL() {
   const [open, setOpen] = React.useState(false);
+
+  const location = useLocation();
+  const pathnames = location.pathname.split("/").filter((x) => x);
+
+  const getBreadcrumbName = (path) => {
+    for (let pattern in nameMap) {
+        const regex = new RegExp(`^${pattern.replace(/:[^\s/]+/g, '[^/]+')}$`);
+        if (regex.test(path)) {
+            return nameMap[pattern];
+        }
+    }
+    return 'Page Not Found';
+  };
 
   return (
     <>
@@ -32,19 +47,25 @@ export default function DashboardL() {
               />
               <Breadcrumb className="my-auto">
                 <BreadcrumbList>
-                  <BreadcrumbItem className="hidden md:block">
-                    <BreadcrumbLink
-                      href="#"
-                      className="text-white font-semibold"
-                    >
-                      Dashboard
-                    </BreadcrumbLink>
-                  </BreadcrumbItem>
-                  <BreadcrumbSeparator className="hidden md:block text-white font-semibold" />
                   <BreadcrumbItem>
-                    <BreadcrumbPage className="font-semibold text-white">
-                      Cutting Monitoring
-                    </BreadcrumbPage>
+                      {pathnames.map((value, index) => {
+                        const to = `/${pathnames.slice(0, index + 1).join("/")}`;
+                        const isLast = index === pathnames.length - 1;
+                        return isLast ? (
+                          <BreadcrumbPage key={to} className="font-semibold text-white">
+                            {getBreadcrumbName(to)}
+                          </BreadcrumbPage>
+                        ) : (
+                          <React.Fragment key={to}>
+                            <BreadcrumbItem className="hidden md:block">
+                              <BreadcrumbLink href={to} className="text-white font-semibold">
+                              {getBreadcrumbName(to)}
+                              </BreadcrumbLink>
+                            </BreadcrumbItem>
+                            <BreadcrumbSeparator className="hidden md:block text-white font-semibold" />
+                          </React.Fragment>
+                        );
+                      })}
                   </BreadcrumbItem>
                 </BreadcrumbList>
               </Breadcrumb>

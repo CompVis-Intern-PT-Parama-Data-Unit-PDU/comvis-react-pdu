@@ -85,3 +85,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .active-sidebar {
+    @apply bg-[#27272A]
+  }
+  /* .default-sidebar {
+    @apply w-full xl:w-[300px] flex justify-start
+  } */
+}

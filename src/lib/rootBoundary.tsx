@@ -21,7 +21,6 @@ export function RootBoundary() {
         return <div>Dang!!</div>;
       }
     }
-  
     return <div>Something went wrong</div>;
   }
   

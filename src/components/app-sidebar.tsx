@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import {
   Gauge,
   Webcam,
@@ -20,7 +21,6 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
 } from "@/components/ui/sidebar";
-
 import { ServiceSwitcher } from "@/components/service-switcher";
 import { NavMain } from "@/components/nav-main";
 import { NavAdmin } from "@/components/nav-admin";
@@ -32,12 +32,12 @@ const data = {
   feats: [
     {
       title: "Cutting Monitoring",
-      url: "#",
+      url: "/dashboard/cutting-monitoring",
       icon: Webcam,
     },
     {
       title: "Drilling Console",
-      url: "#",
+      url: "/dashboard/drilling-console",
       icon: Gauge,
     },
   ],
@@ -46,39 +46,43 @@ const data = {
       name: "EyeLog",
       logo: ScanEye,
       desc: "Computer Vision Monitoring",
+      url: "/dashboard",
     },
     {
       name: "DataWave",
       logo: ScanText,
       desc: "OCR & Data Extraction",
+      url: "https://tedi.sv.ugm.ac.id/id/muka/"
     },
     {
       name: "Alertify",
       logo: Siren,
       desc: "Real-time Alerts",
+      url: "https://tedi.sv.ugm.ac.id/id/muka/"
     },
   ],
   admin: [
     {
       title: "User Management",
-      url: "#",
+      url: "/dashboard/user-management",
       icon: UserCog,
+
     },
     {
       title: "System Health",
-      url: "#",
+      url: "/dashboard/system-health",
       icon: HeartPulse,
     },
   ],
   footer: [
     {
       title: "Support",
-      url: "#",
+      url: "/dashboard/support",
       icon: LifeBuoy,
     },
     {
       title: "Feedback",
-      url: "#",
+      url: "/dashboard/feedback",
       icon: Send,
     },
   ],
@@ -106,7 +110,6 @@ export default function AppSidebar() {
             </div>
           </SidebarMenuButton>
           </SidebarMenuItem>
-
         </SidebarMenu>
         <Separator className="bg-primary" />
         <ServiceSwitcher services={data.services} />
@@ -117,11 +120,11 @@ export default function AppSidebar() {
       <SidebarContent>
         <SidebarMenu>
           <SidebarMenuItem className="px-2 mt-1">
-            <SidebarMenuButton asChild tooltip={"Dashboard"}>
-              <a href="#">
+            <SidebarMenuButton asChild tooltip={"Dashboard"} isActive>
+              <NavLink to="/dashboard">
                 <Home />
                 <span>Dashboard</span>
-              </a>
+              </NavLink>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>

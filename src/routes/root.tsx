@@ -18,15 +18,23 @@ const router = createBrowserRouter(
           <LoginForm/>
         </ThemeProvider>
       ),
+      errorElement:<RootBoundary />,
     },
     {
-      path: "/dashboard",
+      path: "login",
+      element: (
+        <ThemeProvider>
+          <LoginForm/>
+        </ThemeProvider>
+      ),
+    },
+    {
+      path: "dashboard",
       element: (
         <ThemeProvider>
           <DashboardL />
         </ThemeProvider>
       ),
-      errorElement: <RootBoundary />,
       children: [
         { index: true, element: <DashboardP /> },
         {
@@ -52,10 +60,6 @@ const router = createBrowserRouter(
         }
       ],
     },
-    // {
-    //   path: "*",
-    //   element: <ErrorP />,
-    // }
   ],
 );
 
