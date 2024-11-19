@@ -13,6 +13,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import { Link } from "react-router-dom"
 
 export function ServiceSwitcher({
     services,
@@ -21,6 +22,7 @@ export function ServiceSwitcher({
       name: string
       logo: React.ElementType
       desc: string
+      url: string
     }[]
   }) {
     const [activeService, setActiveService] = React.useState(services[0])
@@ -55,6 +57,7 @@ export function ServiceSwitcher({
                 Services
               </DropdownMenuLabel>
               {services.map((service) => (
+              <Link to={service.url}>
                 <DropdownMenuItem
                   key={service.name}
                   onClick={() => setActiveService(service)}
@@ -65,6 +68,7 @@ export function ServiceSwitcher({
                   </div>
                   {service.name}
                 </DropdownMenuItem>
+              </Link>
               ))}
             </DropdownMenuContent>
           </DropdownMenu>

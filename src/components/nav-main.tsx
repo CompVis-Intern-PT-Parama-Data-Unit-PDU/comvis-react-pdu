@@ -1,4 +1,5 @@
 import { type LucideIcon } from "lucide-react"
+import { NavLink } from "react-router-dom"
 
 import {
   SidebarGroup,
@@ -23,11 +24,11 @@ export function NavMain({
       <SidebarMenu>
         {feats.map((feat) => (
             <SidebarMenuItem>
-              <SidebarMenuButton asChild tooltip={feat.title}>
-                <a href={feat.url}>
+              <SidebarMenuButton asChild tooltip={feat.title} >
+                <NavLink to={feat.url}>
                   <feat.icon />
                   <span>{feat.title}</span>
-                </a>
+                </NavLink>
               </SidebarMenuButton>
             </SidebarMenuItem>
         ))}

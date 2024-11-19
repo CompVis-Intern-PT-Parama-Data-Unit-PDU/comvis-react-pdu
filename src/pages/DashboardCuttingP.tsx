@@ -1,4 +1,3 @@
-import DashboardL from "@/layout/DashboardL";
 import { CompanyS, SiteS, WellS } from "@/components/dropdown-nested";
 import { Separator } from "@/components/ui/separator";
 import { MapPinned } from "lucide-react";
@@ -10,6 +9,8 @@ import {
 } from "@/components/ui/hover-card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { PagiCam } from "@/components/camera-pagination";
+import { Link } from "react-router-dom";
+
 
 export default function CuttingDP() {
   return (
@@ -52,9 +53,9 @@ export default function CuttingDP() {
                 </CardTitle>
               </CardHeader>
               <CardFooter className="flex justify-center text-base  outline outline-primary outline-1 rounded-b-xl align-middle p-2 hover:bg-primary hover:text-white">
-                <a href="#" className="self-end font-semibold">
+                <Link to="/dashboard/cutting-monitoring/:cameraid" className="self-end font-semibold">
                   Open Camera
-                </a>
+                </Link>
               </CardFooter>
             </Card>
             <Card className="w-full outline-sidebar-primary outline outline-1 shadow-sidebar-primary h-fit">
@@ -80,9 +81,9 @@ export default function CuttingDP() {
                 </CardTitle>
               </CardHeader>
               <CardFooter className="flex justify-center text-base  outline outline-primary outline-1 rounded-b-xl align-middle p-2 hover:bg-primary hover:text-white">
-                <a href="#" className="self-end font-semibold">
+                <Link to="/dashboard/cutting-monitoring/:cameraid" className="self-end font-semibold">
                   Open Camera
-                </a>
+                </Link>
               </CardFooter>
             </Card>
             <Card className="w-full outline-sidebar-primary outline outline-1 shadow-sidebar-primary h-fit">
@@ -108,9 +109,9 @@ export default function CuttingDP() {
                 </CardTitle>
               </CardHeader>
               <CardFooter className="flex justify-center text-base  outline outline-primary outline-1 rounded-b-xl align-middle p-2 hover:bg-primary hover:text-white">
-                <a href="#" className="self-end font-semibold">
+                <Link to="/dashboard/cutting-monitoring/:cameraid" className="self-end font-semibold">
                   Open Camera
-                </a>
+                </Link>
               </CardFooter>
             </Card>
             <Card className="w-full outline-sidebar-primary outline outline-1 shadow-sidebar-primary h-fit">
@@ -136,9 +137,9 @@ export default function CuttingDP() {
                 </CardTitle>
               </CardHeader>
               <CardFooter className="flex justify-center text-base  outline outline-primary outline-1 rounded-b-xl align-middle p-2 hover:bg-primary hover:text-white">
-                <a href="#" className="self-end font-semibold">
+                <Link to="/dashboard/cutting-monitoring/:cameraid" className="self-end font-semibold">
                   Open Camera
-                </a>
+                </Link>
               </CardFooter>
             </Card>
             <Card className="w-full outline-sidebar-primary outline outline-1 shadow-sidebar-primary h-fit">
@@ -164,9 +165,9 @@ export default function CuttingDP() {
                 </CardTitle>
               </CardHeader>
               <CardFooter className="flex justify-center text-base  outline outline-primary outline-1 rounded-b-xl align-middle p-2 hover:bg-primary hover:text-white">
-                <a href="#" className="self-end font-semibold">
+                <Link to="/dashboard/cutting-monitoring/:cameraid" className="self-end font-semibold">
                   Open Camera
-                </a>
+                </Link>
               </CardFooter>
             </Card>
             <Card className="w-full outline-sidebar-primary outline outline-1 shadow-sidebar-primary h-fit">
@@ -192,9 +193,9 @@ export default function CuttingDP() {
                 </CardTitle>
               </CardHeader>
               <CardFooter className="flex justify-center text-base  outline outline-primary outline-1 rounded-b-xl align-middle p-2 hover:bg-primary hover:text-white">
-                <a href="#" className="self-end font-semibold">
+                <Link to="/dashboard/cutting-monitoring/:cameraid" className="self-end font-semibold">
                   Open Camera
-                </a>
+                </Link>
               </CardFooter>
             </Card>
             <Card className="w-full outline-sidebar-primary outline outline-1 shadow-sidebar-primary h-fit">
@@ -220,9 +221,9 @@ export default function CuttingDP() {
                 </CardTitle>
               </CardHeader>
               <CardFooter className="flex justify-center text-base  outline outline-primary outline-1 rounded-b-xl align-middle p-2 hover:bg-primary hover:text-white">
-                <a href="#" className="self-end font-semibold">
+                <Link to="/dashboard/cutting-monitoring/:cameraid" className="self-end font-semibold">
                   Open Camera
-                </a>
+                </Link>
               </CardFooter>
             </Card>
             <Card className="w-full outline-sidebar-primary outline outline-1 shadow-sidebar-primary h-fit">
@@ -248,15 +249,15 @@ export default function CuttingDP() {
                 </CardTitle>
               </CardHeader>
               <CardFooter className="flex justify-center text-base  outline outline-primary outline-1 rounded-b-xl align-middle p-2 hover:bg-primary hover:text-white">
-                <a href="#" className="self-end font-semibold">
+                <Link to="/dashboard/cutting-monitoring/:cameraid" className="self-end font-semibold">
                   Open Camera
-                </a>
+                </Link>
               </CardFooter>
             </Card>
           </div>
         </main>
         </div>
-        <footer className="mb-20">
+        <footer className="mb-5">
           <PagiCam />
         </footer>
         </div>
