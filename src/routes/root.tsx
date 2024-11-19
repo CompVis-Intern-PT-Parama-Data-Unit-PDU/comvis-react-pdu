@@ -45,7 +45,7 @@ const router = createBrowserRouter(
               element: <CuttingDP />,
             },
             {
-              path: "camera/:id",
+              path: ":cameraid",
               element: <DetailCuttingP />,
             },
           ],

@@ -53,7 +53,7 @@ export default function CuttingDP() {
                 </CardTitle>
               </CardHeader>
               <CardFooter className="flex justify-center text-base  outline outline-primary outline-1 rounded-b-xl align-middle p-2 hover:bg-primary hover:text-white">
-                <Link to="/dashboard/cutting-monitoring/camera/:id" className="self-end font-semibold">
+                <Link to="/dashboard/cutting-monitoring/:cameraid" className="self-end font-semibold">
                   Open Camera
                 </Link>
               </CardFooter>
@@ -81,7 +81,7 @@ export default function CuttingDP() {
                 </CardTitle>
               </CardHeader>
               <CardFooter className="flex justify-center text-base  outline outline-primary outline-1 rounded-b-xl align-middle p-2 hover:bg-primary hover:text-white">
-                <Link to="/dashboard/cutting-monitoring/camera/:id" className="self-end font-semibold">
+                <Link to="/dashboard/cutting-monitoring/:cameraid" className="self-end font-semibold">
                   Open Camera
                 </Link>
               </CardFooter>
@@ -109,7 +109,7 @@ export default function CuttingDP() {
                 </CardTitle>
               </CardHeader>
               <CardFooter className="flex justify-center text-base  outline outline-primary outline-1 rounded-b-xl align-middle p-2 hover:bg-primary hover:text-white">
-                <Link to="/dashboard/cutting-monitoring/camera/:id" className="self-end font-semibold">
+                <Link to="/dashboard/cutting-monitoring/:cameraid" className="self-end font-semibold">
                   Open Camera
                 </Link>
               </CardFooter>
@@ -137,7 +137,7 @@ export default function CuttingDP() {
                 </CardTitle>
               </CardHeader>
               <CardFooter className="flex justify-center text-base  outline outline-primary outline-1 rounded-b-xl align-middle p-2 hover:bg-primary hover:text-white">
-                <Link to="/dashboard/cutting-monitoring/camera/:id" className="self-end font-semibold">
+                <Link to="/dashboard/cutting-monitoring/:cameraid" className="self-end font-semibold">
                   Open Camera
                 </Link>
               </CardFooter>
@@ -165,7 +165,7 @@ export default function CuttingDP() {
                 </CardTitle>
               </CardHeader>
               <CardFooter className="flex justify-center text-base  outline outline-primary outline-1 rounded-b-xl align-middle p-2 hover:bg-primary hover:text-white">
-                <Link to="/dashboard/cutting-monitoring/camera/:id" className="self-end font-semibold">
+                <Link to="/dashboard/cutting-monitoring/:cameraid" className="self-end font-semibold">
                   Open Camera
                 </Link>
               </CardFooter>
@@ -193,7 +193,7 @@ export default function CuttingDP() {
                 </CardTitle>
               </CardHeader>
               <CardFooter className="flex justify-center text-base  outline outline-primary outline-1 rounded-b-xl align-middle p-2 hover:bg-primary hover:text-white">
-                <Link to="/dashboard/cutting-monitoring/camera/:id" className="self-end font-semibold">
+                <Link to="/dashboard/cutting-monitoring/:cameraid" className="self-end font-semibold">
                   Open Camera
                 </Link>
               </CardFooter>
@@ -221,7 +221,7 @@ export default function CuttingDP() {
                 </CardTitle>
               </CardHeader>
               <CardFooter className="flex justify-center text-base  outline outline-primary outline-1 rounded-b-xl align-middle p-2 hover:bg-primary hover:text-white">
-                <Link to="/dashboard/cutting-monitoring/camera/:id" className="self-end font-semibold">
+                <Link to="/dashboard/cutting-monitoring/:cameraid" className="self-end font-semibold">
                   Open Camera
                 </Link>
               </CardFooter>
@@ -249,7 +249,7 @@ export default function CuttingDP() {
                 </CardTitle>
               </CardHeader>
               <CardFooter className="flex justify-center text-base  outline outline-primary outline-1 rounded-b-xl align-middle p-2 hover:bg-primary hover:text-white">
-                <Link to="/dashboard/cutting-monitoring/camera/:id" className="self-end font-semibold">
+                <Link to="/dashboard/cutting-monitoring/:cameraid" className="self-end font-semibold">
                   Open Camera
                 </Link>
               </CardFooter>
@@ -257,7 +257,7 @@ export default function CuttingDP() {
           </div>
         </main>
         </div>
-        <footer className="mb-20">
+        <footer className="mb-5">
           <PagiCam />
         </footer>
         </div>

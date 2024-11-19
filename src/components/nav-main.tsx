@@ -24,7 +24,7 @@ export function NavMain({
       <SidebarMenu>
         {feats.map((feat) => (
             <SidebarMenuItem>
-              <SidebarMenuButton asChild tooltip={feat.title}>
+              <SidebarMenuButton asChild tooltip={feat.title} >
                 <NavLink to={feat.url}>
                   <feat.icon />
                   <span>{feat.title}</span>

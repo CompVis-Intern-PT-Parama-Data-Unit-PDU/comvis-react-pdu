@@ -49,13 +49,13 @@ const data = {
       url: "/dashboard",
     },
     {
-      name: "DataWave",
+      name: "OCR & Data Extraction",
       logo: ScanText,
       desc: "OCR & Data Extraction",
       url: "https://tedi.sv.ugm.ac.id/id/muka/"
     },
     {
-      name: "Alertify",
+      name: "Early Warning System",
       logo: Siren,
       desc: "Real-time Alerts",
       url: "https://tedi.sv.ugm.ac.id/id/muka/"
@@ -94,7 +94,7 @@ const data = {
 };
 export default function AppSidebar() {
   return (
-    <Sidebar collapsible="icon">
+    <Sidebar collapsible="icon" >
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
@@ -120,7 +120,7 @@ export default function AppSidebar() {
       <SidebarContent>
         <SidebarMenu>
           <SidebarMenuItem className="px-2 mt-1">
-            <SidebarMenuButton asChild tooltip={"Dashboard"} isActive>
+            <SidebarMenuButton asChild tooltip={"Dashboard"}>
               <NavLink to="/dashboard">
                 <Home />
                 <span>Dashboard</span>

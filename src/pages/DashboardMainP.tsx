@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Webcam, GaugeCircle, ChevronRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 export default function DashboardP() {
   return (
@@ -33,8 +34,10 @@ export default function DashboardP() {
               </div>
             </div>
             <Button className="w-full mt-6" variant="outline">
-              View Detailed Each Camera
-              <ChevronRight className="ml-2 h-4 w-4" />
+              <Link to="/dashboard/cutting-monitoring" className="flex">
+                View Detailed Each Camera
+                <ChevronRight className="ml-2 h-4 w-4 my-auto" />
+              </Link>            
             </Button>
           </CardContent>
         </Card>
@@ -61,13 +64,13 @@ export default function DashboardP() {
               </div>
             </div>
             <Button className="w-full mt-6" variant="outline" disabled >
-              View Detailed Each Camera
-              <ChevronRight className="ml-2 h-4 w-4" />
+              <Link to="/dashboard/detail-console" className="flex" >
+                View Detailed Each Camera
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Link>
             </Button>
           </CardContent>
         </Card>
-
-
       </div>
 
     </div>
