@@ -26,12 +26,10 @@ export async function loginAction({
       return errors;
     }
 
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/login` || "http://localhost:3001/api/auth/login", {
-      method: "POST",
-      credentials: "include",
-      headers: {
-        "Content-Type": "application/json",
-      },
+    const response = await fetch('http://localhost:3001/api/auth/login' , {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'include',
       body: JSON.stringify({ email, password }),
     });
 
@@ -47,20 +45,15 @@ export async function loginAction({
   }
 }
 
-export async function refreshAccessToken() {
-    try {
-      const response = await fetch('/api/auth/refresh-token', {
-        method: 'POST',
-        credentials: 'include' // Penting untuk cookies
-      });
-  
-      if (response.ok) {
-        // Token berhasil diperbarui
-        return true;
-      }
-      return false;
-    } catch (error) {
-      console.error('Token refresh failed', error);
-      return false;
-    }
+export async function loginLoader() {
+  try {
+    const response = await fetch('/api/auth/verify', {
+      credentials: 'include'
+    });
+    return response.ok 
+      ? redirect("/dashboard") 
+      : null;
+  } catch {
+    return null;
   }
+}
