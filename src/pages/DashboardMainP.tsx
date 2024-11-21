@@ -51,11 +51,11 @@ export default function DashboardP() {
           <CardContent className="p-6">
             <div className="space-y-4">
               <div className="flex justify-between items-center">
-                <span>Camera Actice</span>
+                <span>Camera Active</span>
                 <span className="font-semibold">4/5</span>
               </div>
               <div className="flex justify-between items-center">
-                <span className="">Actice Hours</span>
+                <span className="">Active Hours</span>
                 <span className="font-semibold">32:18:03</span>
               </div>
               <div className="flex justify-between items-center">

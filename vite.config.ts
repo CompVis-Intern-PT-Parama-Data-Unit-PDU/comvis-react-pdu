@@ -11,17 +11,10 @@ export default defineConfig({
     },
   },
   server: {
-    host: '0.0.0.0',
+    host: true,
     port: 5173,
-    watch: {
-      usePolling: true, // Enable polling for WSL2
-      interval: 100     // Polling interval in ms
-    }
   },
   build: {
-    manifest: true,
-    rollupOptions: {
-      input: path.resolve(__dirname, "./src/main.tsx"),
-    },
-  },
+    outDir: 'dist',
+  }
 })

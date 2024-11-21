@@ -8,6 +8,7 @@ import DashboardP from "@/pages/DashboardMainP";
 import CuttingDP from "@/pages/DashboardCuttingP";
 import DetailCuttingP from "@/pages/DetailCuttingP";
 import UserManagement from "@/pages/UserManagement";
+import { loginAction } from "@/services/authServices";
 
 const router = createBrowserRouter(
   [
@@ -19,14 +20,7 @@ const router = createBrowserRouter(
         </ThemeProvider>
       ),
       errorElement:<RootBoundary />,
-    },
-    {
-      path: "login",
-      element: (
-        <ThemeProvider>
-          <LoginForm/>
-        </ThemeProvider>
-      ),
+      action: loginAction,
     },
     {
       path: "dashboard",
@@ -61,6 +55,12 @@ const router = createBrowserRouter(
       ],
     },
   ],
+  {
+    future: {
+      v7_fetcherPersist: true,
+      v7_normalizeFormMethod: true,
+    },
+  }
 );
 
 export default router;
