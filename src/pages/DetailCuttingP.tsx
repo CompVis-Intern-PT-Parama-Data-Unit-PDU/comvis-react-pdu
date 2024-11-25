@@ -9,8 +9,15 @@ import {
   CardContent,
   CardTitle,
 } from "@/components/ui/card";
+import { useNavigate } from 'react-router-dom';
 
 export default function DetailCuttingP() {
+  const navigate = useNavigate();
+  const handleBackToMenu = () => {
+    navigate('/dashboard/cutting-monitoring'); // Sesuaikan dengan path DashboardCutting.tsx
+  };
+
+
   return (
       <main className="flex h-[93%] py-2 px-3 flex-wrap max-h-[93%]">
         <div className="flex flex-col w-fit max-w-min min-w-fit xl:grow max-h-full ml-auto mr-2">
@@ -31,7 +38,7 @@ export default function DetailCuttingP() {
                   <CardDescription>
                     Showing amount percent of cutting at shale shaker
                   </CardDescription>
-                  <Button>
+                  <Button onClick={handleBackToMenu}>
                     <SquareArrowLeft />
                     Back to Menu
                   </Button>
@@ -41,9 +48,12 @@ export default function DetailCuttingP() {
                 <div className="flex align-middle justify-center">
                   <div className="my-auto space-y-3 px-3">
                     <DatePicker />
-                    <Button className="w-[225px]">
-                      <Download />
-                      Download
+                    <Button className="w-[225px]" asChild>
+                      <a href="/files/sample.pdf" download>
+                        <Download/>
+                        Download
+                      </a>
+                      
                     </Button>
                   </div>
                 </div>
