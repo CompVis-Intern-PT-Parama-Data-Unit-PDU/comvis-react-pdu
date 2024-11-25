@@ -48,12 +48,9 @@ export default function DetailCuttingP() {
                 <div className="flex align-middle justify-center">
                   <div className="my-auto space-y-3 px-3">
                     <DatePicker />
-                    <Button className="w-[225px]" asChild>
-                      <a href="/files/sample.pdf" download>
+                    <Button className="w-[225px]">
                         <Download/>
-                        Download
-                      </a>
-                      
+                      Download                      
                     </Button>
                   </div>
                 </div>
