@@ -10,6 +10,9 @@ import {
   LifeBuoy,
   Send,
   Home,
+  Camera,
+  Cctv,
+  Video,
 } from "lucide-react";
 import Logo from "@/assets/icons/pdu.svg";
 import {
@@ -76,7 +79,7 @@ const data = {
     {
       title: "Camera Management",
       url: "/dashboard/camera-management",
-      icon: Siren,
+      icon: Video,
     },
   ],
   footer: [
