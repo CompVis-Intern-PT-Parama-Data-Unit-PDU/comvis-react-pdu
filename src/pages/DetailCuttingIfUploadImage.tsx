@@ -14,18 +14,17 @@ import { useNavigate } from "react-router-dom";
 
 export default function DetailCuttingP() {
   const navigate = useNavigate(); // Inisialisasi useNavigate
-  const [selectedFile, setSelectedFile] = useState<File | null>(null); // State untuk file yang di-upload
+  const [selectedFile, setSelectedFile] = useState<File | null>(null); // State untuk file yang diunggah
   const [previewImage, setPreviewImage] = useState<string | null>(null); // State untuk preview gambar
 
   const handleBackToMenu = () => {
-    navigate("/dashboard-cutting"); // Sesuaikan dengan path DashboardCutting.tsx
+    navigate("/dashboard/cutting-monitoring"); // Sesuaikan dengan path DashboardCutting.tsx
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
       setSelectedFile(file); // Simpan file ke state
-      setPreviewImage(URL.createObjectURL(file)); // Buat URL blob untuk preview
     }
   };
 
@@ -35,12 +34,8 @@ export default function DetailCuttingP() {
       return;
     }
 
-    // Proses pengiriman file (misalnya ke API)
-    console.log("File submitted:", selectedFile);
-
-    // Reset state setelah submit
-    setSelectedFile(null);
-    setPreviewImage(null);
+    // Tampilkan preview gambar setelah tombol Submit ditekan
+    setPreviewImage(URL.createObjectURL(selectedFile));
     alert("File uploaded successfully!");
   };
 
@@ -60,7 +55,7 @@ export default function DetailCuttingP() {
               </AspectRatio>
             ) : (
               <AspectRatio ratio={2 / 1} className="w-full bg-gray-200 flex items-center justify-center">
-                <span className="text-gray-500">No image uploaded</span>
+                <span className="text-gray-500">No image preview available</span>
               </AspectRatio>
             )}
 
