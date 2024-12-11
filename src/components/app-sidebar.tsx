@@ -73,6 +73,11 @@ const data = {
       url: "/dashboard/system-health",
       icon: HeartPulse,
     },
+    {
+      title: "Camera Management",
+      url: "/dashboard/camera-management",
+      icon: Siren,
+    },
   ],
   footer: [
     {

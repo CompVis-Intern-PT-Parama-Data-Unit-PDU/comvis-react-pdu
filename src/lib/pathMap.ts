@@ -9,4 +9,5 @@ export const nameMap = {
     '/dashboard/system-health': 'System Health',
     '/dashboard/support': 'Support',
     '/dashboard/feedback': 'Feedback',
+    '/dashboard/camera-management': 'Camera Management',
   };

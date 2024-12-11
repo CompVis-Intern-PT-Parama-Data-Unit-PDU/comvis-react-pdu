@@ -8,6 +8,7 @@ import DashboardP from "@/pages/DashboardMainP";
 import CuttingDP from "@/pages/DashboardCuttingP";
 import DetailCuttingP from "@/pages/DetailCuttingP";
 import UserManagement from "@/pages/UserManagement";
+import CameraManagement from "@/pages/CameraManagement";
 
 const router = createBrowserRouter(
   [
@@ -57,6 +58,10 @@ const router = createBrowserRouter(
         {
           path: "user-management",
           element: <UserManagement/>
+        },
+        {
+          path: "camera-management",
+          element: <CameraManagement />,
         }
       ],
     },
