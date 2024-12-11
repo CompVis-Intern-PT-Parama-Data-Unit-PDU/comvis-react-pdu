@@ -9,7 +9,7 @@ export default function UserManagement() {
         <div>
         <nav className="flex p-4 bg-sidebar  align-middle">
           <h1 className="font-semibold text-lg my-auto">
-            User Management
+            Camera Management
           </h1>
         </nav>
         <Separator className="bg-sidebar-primary" />
