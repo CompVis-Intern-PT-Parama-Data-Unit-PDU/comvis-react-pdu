@@ -1,258 +1,73 @@
-import { ChevronDown, Trash2 } from "lucide-react"
+import { Edit, Trash2 } from "lucide-react";
 
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/components/ui/avatar"
-import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-} from "@/components/ui/command"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover"
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export function ListCamera() {
+  const cameras = [
+    {
+      cameraName: "Camera 1",
+      client: "Client A",
+      site: "Site X",
+      well: "Well 1",
+    },
+    {
+      cameraName: "Camera 2",
+      client: "Client B",
+      site: "Site Y",
+      well: "Well 2",
+    },
+    {
+      cameraName: "Camera 3",
+      client: "Client C",
+      site: "Site Z",
+      well: "Well 3",
+    },
+  ];
+
   return (
     <Card className="min-h-full ml-auto mr-2 border-primary">
       <CardHeader>
         <CardTitle className="text-2xl">List Camera</CardTitle>
       </CardHeader>
-      <CardContent className="grid gap-6">
-        <div className="flex items-center justify-between space-x-4">
-          <div className="flex items-center space-x-4">
-            <Avatar>
-              <AvatarImage src="/avatars/01.png" />
-              <AvatarFallback>OM</AvatarFallback>
-            </Avatar>
-            <div>
-              <p className="text-sm font-medium leading-none">Sofia Davis</p>
-              <p className="text-sm text-muted-foreground">m@example.com</p>
-            </div>
-          </div>
-          <Popover>
-            <PopoverTrigger asChild>
-              <Button variant="outline" className="ml-auto">
-                Superdmin <ChevronDown className="text-muted-foreground" />
-              </Button>
-            </PopoverTrigger>
-            <PopoverContent className="p-0" align="end">
-              <Command>
-                <CommandInput placeholder="Select new role..." />
-                <CommandList>
-                  <CommandEmpty>No roles found.</CommandEmpty>
-                  <CommandGroup className="p-1.5">
-                    <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
-                      <p>Member</p>
-                      <p className="text-sm text-muted-foreground">
-                        Can view
-                      </p>
-                    </CommandItem>
-                    <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
-                      <p>Admin</p>
-                      <p className="text-sm text-muted-foreground">
-                        Can view, comment and edit.
-                      </p>
-                    </CommandItem>
-                    <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
-                      <p>Superadmin</p>
-                      <p className="text-sm text-muted-foreground">
-                        Admin-level access to all resources.
-                      </p>
-                    </CommandItem>
-                  </CommandGroup>
-                </CommandList>
-              </Command>
-            </PopoverContent>
-          </Popover>
-        </div>
-        <div className="flex items-center justify-between space-x-4">
-          <div className="flex items-center space-x-4">
-            <Avatar>
-              <AvatarImage src="/avatars/02.png" />
-              <AvatarFallback>JL</AvatarFallback>
-            </Avatar>
-            <div>
-              <p className="text-sm font-medium leading-none">Bruce Lee</p>
-              <p className="text-sm text-muted-foreground">p@example.com</p>
-            </div>
-          </div>
-          <Popover>
-            <PopoverTrigger asChild>
-              <Button variant="outline" className="ml-auto">
-                Admin <ChevronDown className="text-muted-foreground" />
-              </Button>
-            </PopoverTrigger>
-            <PopoverContent className="p-0" align="end">
-              <Command>
-                <CommandInput placeholder="Select new role..." />
-                <CommandList>
-                  <CommandEmpty>No roles found.</CommandEmpty>
-                  <CommandGroup className="p-1.5">
-                    <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
-                      <p>Member</p>
-                      <p className="text-sm text-muted-foreground">
-                        Can view
-                      </p>
-                    </CommandItem>
-                    <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
-                      <p>Admin</p>
-                      <p className="text-sm text-muted-foreground">
-                        Can view, comment and edit.
-                      </p>
-                    </CommandItem>
-                    <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
-                      <p>Superadmin</p>
-                      <p className="text-sm text-muted-foreground">
-                        Admin-level access to all resources.
-                      </p>
-                    </CommandItem>
-                  </CommandGroup>
-                </CommandList>
-              </Command>
-            </PopoverContent>
-          </Popover>
-          <Popover>
-            <PopoverTrigger asChild>
-              <Button variant="destructive" className="ml-auto">
-                <Trash2/>
-                Delete
-              </Button>
-            </PopoverTrigger>
-            <PopoverContent className="p-0" align="end">
-            </PopoverContent>
-          </Popover>
-        </div>
-        <div className="flex items-center justify-between space-x-4">
-          <div className="flex items-center space-x-4">
-            <Avatar>
-              <AvatarImage src="/avatars/02.png" />
-              <AvatarFallback>JL</AvatarFallback>
-            </Avatar>
-            <div>
-              <p className="text-sm font-medium leading-none">Jackson Lee</p>
-              <p className="text-sm text-muted-foreground">p@example.com</p>
-            </div>
-          </div>
-          <Popover>
-            <PopoverTrigger asChild>
-              <Button variant="outline" className="ml-auto">
-                Member <ChevronDown className="text-muted-foreground" />
-              </Button>
-            </PopoverTrigger>
-            <PopoverContent className="p-0" align="end">
-              <Command>
-                <CommandInput placeholder="Select new role..." />
-                <CommandList>
-                  <CommandEmpty>No roles found.</CommandEmpty>
-                  <CommandGroup className="p-1.5">
-                    <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
-                      <p>Member</p>
-                      <p className="text-sm text-muted-foreground">
-                        Can view
-                      </p>
-                    </CommandItem>
-                    <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
-                      <p>Admin</p>
-                      <p className="text-sm text-muted-foreground">
-                        Can view, comment and edit.
-                      </p>
-                    </CommandItem>
-                    <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
-                      <p>Superadmin</p>
-                      <p className="text-sm text-muted-foreground">
-                        Admin-level access to all resources.
-                      </p>
-                    </CommandItem>
-                  </CommandGroup>
-                </CommandList>
-              </Command>
-            </PopoverContent>
-          </Popover>
-          <Popover>
-            <PopoverTrigger asChild>
-              <Button variant="destructive" className="ml-auto">
-                <Trash2/>
-                Delete
-              </Button>
-            </PopoverTrigger>
-            <PopoverContent className="p-0" align="end">
-            </PopoverContent>
-          </Popover>
-        </div>
-        <div className="flex items-center justify-between space-x-4">
-          <div className="flex items-center space-x-4">
-            <Avatar>
-              <AvatarImage src="/avatars/02.png" />
-              <AvatarFallback>JL</AvatarFallback>
-            </Avatar>
-            <div>
-              <p className="text-sm font-medium leading-none">Jackson Lee</p>
-              <p className="text-sm text-muted-foreground">p@example.com</p>
-            </div>
-          </div>
-          <Popover>
-            <PopoverTrigger asChild>
-              <Button variant="outline" className="ml-auto">
-                Member <ChevronDown className="text-muted-foreground" />
-              </Button>
-            </PopoverTrigger>
-            <PopoverContent className="p-0" align="end">
-              <Command>
-                <CommandInput placeholder="Select new role..." />
-                <CommandList>
-                  <CommandEmpty>No roles found.</CommandEmpty>
-                  <CommandGroup className="p-1.5">
-                    <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
-                      <p>Member</p>
-                      <p className="text-sm text-muted-foreground">
-                        Can view
-                      </p>
-                    </CommandItem>
-                    <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
-                      <p>Admin</p>
-                      <p className="text-sm text-muted-foreground">
-                        Can view, comment and edit.
-                      </p>
-                    </CommandItem>
-                    <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
-                      <p>Superadmin</p>
-                      <p className="text-sm text-muted-foreground">
-                        Admin-level access to all resources.
-                      </p>
-                    </CommandItem>
-                  </CommandGroup>
-                </CommandList>
-              </Command>
-            </PopoverContent>
-          </Popover>
-          <Popover>
-            <PopoverTrigger asChild>
-              <Button variant="destructive" className="ml-auto">
-                <Trash2/>
-                Delete
-              </Button>
-            </PopoverTrigger>
-            <PopoverContent className="p-0" align="end">
-            </PopoverContent>
-          </Popover>
-        </div>
+      <CardContent className="overflow-x-auto">
+        <table className="min-w-full table-auto border-collapse border border-gray-200">
+          <thead>
+            <tr className="bg-gray-100">
+              <th className="border border-gray-200 px-4 py-2 text-left">Camera Name</th>
+              <th className="border border-gray-200 px-4 py-2 text-left">Client</th>
+              <th className="border border-gray-200 px-4 py-2 text-left">Site</th>
+              <th className="border border-gray-200 px-4 py-2 text-left">Well</th>
+              <th className="border border-gray-200 px-4 py-2 text-center">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {cameras.map((camera, index) => (
+              <tr key={index} className="hover:bg-gray-50">
+                <td className="border border-gray-200 px-4 py-2">{camera.cameraName}</td>
+                <td className="border border-gray-200 px-4 py-2">{camera.client}</td>
+                <td className="border border-gray-200 px-4 py-2">{camera.site}</td>
+                <td className="border border-gray-200 px-4 py-2">{camera.well}</td>
+                <td className="border border-gray-200 px-4 py-2 text-center">
+                  <div className="flex justify-center space-x-2">
+                    <Button variant="outline" size="sm" className="flex items-center">
+                      <Edit className="w-4 h-4" />
+                    </Button>
+                    <Button variant="destructive" size="sm" className="flex items-center">
+                      <Trash2 className="w-4 h-4" />
+                    </Button>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </CardContent>
     </Card>
-  )
+  );
 }

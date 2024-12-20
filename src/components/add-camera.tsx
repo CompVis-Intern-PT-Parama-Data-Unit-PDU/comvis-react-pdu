@@ -44,31 +44,56 @@ export function AddCamera() {
         </div>
         <div className="grid gap-2 mt-3">
           <Label htmlFor="client" className="flex justify-between items-baseline">Client</Label>
-          <Input
-            id="client"
-            type="text"
-            required
-          />
+          <div className="relative">
+            <select id="client" className="form-select appearance-none w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500" required>
+              <option value="">Client</option>
+              <option value="Client A">Client A</option>
+              <option value="Client B">Client B</option>
+              <option value="Client C">Client C</option>
+            </select>
+            <span className="absolute inset-y-0 right-4 flex items-center pointer-events-none">
+              <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </span>
+          </div>
         </div>
         <div className="grid gap-2 mt-3">
           <Label htmlFor="site" className="flex justify-between items-baseline">Site</Label>
-          <Input
-            id="site"
-            type="text"
-            required
-          />
+          <div className="relative">
+            <select id="site" className="form-select appearance-none w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500" required>
+              <option value="">Site</option>
+              <option value="Site X">Site X</option>
+              <option value="Site Y">Site Y</option>
+              <option value="Site Z">Site Z</option>
+            </select>
+            <span className="absolute inset-y-0 right-4 flex items-center pointer-events-none">
+              <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </span>
+          </div>
         </div>
         <div className="grid gap-2 mt-3">
           <Label htmlFor="well" className="flex justify-between items-baseline">Well</Label>
-          <Input
-            id="well"
-            type="text"
-            required
-          />
+          <div className="relative">
+            <select id="well" className="form-select appearance-none w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500" required>
+              <option value="">Well</option>
+              <option value="Well 1">Well 1</option>
+              <option value="Well 2">Well 2</option>
+              <option value="Well 3">Well 3</option>
+            </select>
+            <span className="absolute inset-y-0 right-4 flex items-center pointer-events-none">
+              <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </span>
+          </div>
         </div>
+  
             </ScrollArea>
         <Button type="submit" className="w-full">
-          Login
+          Submit
         </Button>
       </div>
     </CardContent>
