@@ -1,4 +1,4 @@
-import { Icons } from "@/assets/icons/icons";
+import { CompanyS, SiteS, WellS } from "@/components/dropdown-nested";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -11,70 +11,72 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
-export function CreateUser() {
+export function AddCam() {
   return (
     <Card className="ml-auto h-full mr-2 w-1/3 border-primary">
       <CardHeader>
-        <CardTitle className="text-2xl">Create User</CardTitle>
+        <CardTitle className="text-2xl">Add a Camera</CardTitle>
         <CardDescription>
-          Fill out the form to create a user account
+          Fill out the form to add a camera to list table
         </CardDescription>
       </CardHeader>
       <CardContent>
         <div className="grid gap-4">
-          <Button variant="outline" className="w-full">
-            <Icons.google className="mr-2 h-4 w-4" />
-            Google
-          </Button>
-          <div className="relative flex justify-center text-xs uppercase">
-            <span className="bg-background px-2 text-muted-foreground">
-              Or continue with
-            </span>
-          </div>
-
-          <ScrollArea className="rounded-md h-[260px]">
+          <ScrollArea className="rounded-md h-full">
             <div className="grid gap-2">
               <Label
-                htmlFor="full-name"
+                htmlFor="camera-name"
                 className="flex justify-between items-baseline"
               >
-                Full Name
+                Camera Name
               </Label>
               <Input
-                id="full-name"
+                id="camera-name"
                 type="text"
-                placeholder="John Doe"
+                placeholder="Camera XXX-XX-00-00X"
                 required
               />
             </div>
             <div className="grid gap-2 mt-3">
               <Label
-                htmlFor="email"
+                htmlFor="ip-address"
                 className="flex justify-between items-baseline"
               >
-                Email
+                IP Address
               </Label>
               <Input
-                id="email"
-                type="email"
-                placeholder="John@example.com"
+                id="ip-address"
+                type="text"
+                placeholder="rtmp://0.0.0.0:PORT/live/STREAM_NAME"
                 required
               />
             </div>
             <div className="grid gap-2 mt-3">
               <Label
-                htmlFor="employee-number"
+                htmlFor="company-name"
                 className="flex justify-between items-baseline"
               >
-                Employee Number{" "}
+                Company
               </Label>
-              <Input id="employee-number" type="text" required />
+              <CompanyS className="w-full"/>
             </div>
             <div className="grid gap-2 mt-3">
-              <div className="flex items-center">
-                <Label htmlFor="password">Password</Label>
-              </div>
-              <Input id="password" type="password" required />
+              <Label
+                htmlFor="company-name"
+                className="flex justify-between items-baseline"
+              >
+                Company
+              </Label>
+              <SiteS className="w-full" />
+            </div>
+            <div className="grid gap-2 mt-3">
+              <Label
+                htmlFor="well-name"
+                className="flex justify-between items-baseline"
+              >
+                Well
+              </Label>
+              <WellS className="w-full" />
             </div>
           </ScrollArea>
           <Button type="submit" className="w-full">

@@ -10,6 +10,7 @@ import {
   LifeBuoy,
   Send,
   Home,
+  Camera,
 } from "lucide-react";
 import Logo from "@/assets/icons/pdu.svg";
 import {
@@ -28,6 +29,7 @@ import { NavSecondary } from "@/components/nav-secondary";
 import { NavUser } from "@/components/nav-user";
 import { Separator } from "@/components/ui/separator";
 
+const user = JSON.parse(localStorage.getItem('user') || '{}');
 const data = {
   feats: [
     {
@@ -69,6 +71,12 @@ const data = {
 
     },
     {
+      title: "Camera Management",
+      url: "/dashboard/cam-management",
+      icon: Camera,
+
+    },
+    {
       title: "System Health",
       url: "/dashboard/system-health",
       icon: HeartPulse,
@@ -87,11 +95,12 @@ const data = {
     },
   ],
   user: {
-    name: "Raisal Admin",
-    email: "raisal@ugm.com",
+    name: user?.full_name || "Admin Default",
+    email: user?.email || "admin.default@mail.com",
     avatar: "/src/assets/icons/avatar.jpg",
   },
 };
+
 export default function AppSidebar() {
   return (
     <Sidebar collapsible="icon" >

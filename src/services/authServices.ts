@@ -38,22 +38,36 @@ export async function loginAction({
       return { error: error.message || "Login failed" };
     }
 
-    await response.json();
+    const result = await response.json();
+    console.log(result);
+    localStorage.setItem('isAuthenticated', 'true');
+    localStorage.setItem('user', JSON.stringify(result.user));
     return redirect("/dashboard");
   } catch (error) {
     throw new Error("Network occurred");
   }
 }
 
-export async function loginLoader() {
+export async function logoutAction() {
   try {
-    const response = await fetch('/api/auth/verify', {
+    const response = await fetch('http://localhost:3001/api/auth/logout', {
+      method: 'POST',
       credentials: 'include'
-    });
-    return response.ok 
-      ? redirect("/dashboard") 
-      : null;
-  } catch {
-    return null;
+    })
+
+    if (response.ok) {
+      localStorage.removeItem('isAuthenticated');
+      return true;
+    } else {
+      const error = await response.json();
+      console.error("Logout failed:", error.message);
+      return false
+    }
+  } catch (error) {
+    console.error("Network error:", error);
+    return false;
   }
 }
+
+
+

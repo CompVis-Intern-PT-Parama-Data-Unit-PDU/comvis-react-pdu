@@ -29,7 +29,7 @@ import {
 
 export function TeamMembers() {
   return (
-    <Card className="min-h-full ml-auto mr-2 border-primary">
+    <Card className="min-h-full mr-auto ml-2 border-primary">
       <CardHeader>
         <CardTitle className="text-2xl">Team Members</CardTitle>
         <CardDescription>

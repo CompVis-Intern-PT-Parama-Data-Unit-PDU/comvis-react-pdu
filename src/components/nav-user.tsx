@@ -1,3 +1,4 @@
+import { logoutAction } from "@/services/authServices"
 import {
   ChevronsUpDown,
   LogOut,
@@ -19,6 +20,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import { useNavigate } from "react-router-dom"
 
 export function NavUser({
   user,
@@ -29,6 +31,14 @@ export function NavUser({
     avatar: string
   }
 }) {
+  const navigate = useNavigate()
+
+  const handleLogout = async () => {
+    const success = await logoutAction();
+    if (success) {
+      navigate('/');
+    }
+  };
 
   return (
     <SidebarMenu>
@@ -56,7 +66,7 @@ export function NavUser({
             align="end"
             sideOffset={4}
           >
-            <DropdownMenuItem>
+            <DropdownMenuItem onSelect={handleLogout}>
               <LogOut />
               Log out
             </DropdownMenuItem>

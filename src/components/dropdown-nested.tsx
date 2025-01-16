@@ -8,10 +8,10 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-export function CompanyS() {
+export function CompanyS({ className }: { className: string }) {
   return (
     <Select>
-      <SelectTrigger className="w-[180px]">
+      <SelectTrigger className={className}>
         <SelectValue placeholder="Company" />
       </SelectTrigger>
       <SelectContent>
@@ -27,10 +27,10 @@ export function CompanyS() {
   );
 }
 
-export function SiteS() {
+export function SiteS({ className }: { className: string }) {
   return (
     <Select>
-      <SelectTrigger className="w-[180px]">
+      <SelectTrigger className={className}>
         <SelectValue placeholder="Site" />
       </SelectTrigger>
       <SelectContent>
@@ -47,10 +47,10 @@ export function SiteS() {
   );
 }
 
-export function WellS() {
+export function WellS({ className }: { className: string }) {
   return (
     <Select>
-      <SelectTrigger className="w-[180px]">
+      <SelectTrigger className={className}>
         <SelectValue placeholder="Well" />
       </SelectTrigger>
       <SelectContent>

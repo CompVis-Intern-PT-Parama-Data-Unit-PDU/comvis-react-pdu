@@ -13,15 +13,26 @@ import AppSidebar from "@/components/app-sidebar";
 import ModeToggle from "@/components/mode-toogle";
 import { Separator } from "@/components/ui/separator";
 import { Notif } from "@/components/notification";
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { nameMap } from "@/lib/pathMap";
 
 
 export default function DashboardL() {
+  const navigate = useNavigate();
   const [open, setOpen] = React.useState(false);
 
   const location = useLocation();
   const pathnames = location.pathname.split("/").filter((x) => x);
+
+  React.useEffect(() => {
+    if(
+      localStorage.getItem('isAuthenticated') === null
+    ){
+      navigate('/', { replace: true });
+      return;  
+    }
+  }, [navigate, location]);
+
 
   const getBreadcrumbName = (path: string) => {
     for (let pattern in nameMap) {
@@ -32,6 +43,7 @@ export default function DashboardL() {
     }
     return 'Page Not Found';
   };
+
 
   return (
     <>

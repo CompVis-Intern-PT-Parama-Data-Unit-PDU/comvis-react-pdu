@@ -1,23 +1,8 @@
-import { ThemeProvider } from "@/components/theme-provider";
-// import LoginForm from "./pages/AuthP"
-// import MainDP from "@/pages/DashboardMainP"
-// import CuttingDP from "@/pages/DashboardCuttingP";
-// import DetailCutP from "@/pages/DetailCuttingP";
-import UserManagement from "@/pages/UserManagement"
+import { Outlet } from "react-router-dom";
 
+export default function App() {
 
-function App() {
-  return (
-    <>
-      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-        {/* <LoginForm/> */}
-        {/* <MainDP/> */}
-        {/* <CuttingP/> */}
-        {/* <DetailCutP/> */}
-        <UserManagement/>
-      </ThemeProvider>
-    </>
+  return (  
+    <Outlet/>
   );
 }
-
-export default App;

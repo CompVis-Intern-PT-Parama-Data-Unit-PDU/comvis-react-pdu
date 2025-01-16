@@ -6,6 +6,7 @@ export const nameMap = {
     '/dashboard/cutting-monitoring/:cameraid': 'Detail Camera',
     '/dashboard/drilling-console': 'Drilling Console',    
     '/dashboard/user-management': 'User Management',
+    '/dashboard/cam-management': 'Camera Management',
     '/dashboard/system-health': 'System Health',
     '/dashboard/support': 'Support',
     '/dashboard/feedback': 'Feedback',

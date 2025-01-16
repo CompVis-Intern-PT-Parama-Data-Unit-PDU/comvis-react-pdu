@@ -1,5 +1,5 @@
-import { TeamMembers } from "@/components/team-member"
-import { CreateUser } from "@/components/create-user"
+import { ListCam } from "@/components/list-camera"
+import { AddCam } from "@/components/add-camera"
 import { Separator } from "@/components/ui/separator"
 import { ScrollArea } from "@/components/ui/scroll-area";
 
@@ -9,14 +9,14 @@ export default function UserManagement() {
         <div>
         <nav className="flex p-4 bg-sidebar  align-middle">
           <h1 className="font-semibold text-lg my-auto">
-            User Management
+            Camera Management
           </h1>
         </nav>
         <Separator className="bg-sidebar-primary" />
         <ScrollArea className="h-[calc(100%-4rem)]">
         <main className="flex justify-center py-4 h-full">
-            <CreateUser/>
-            <TeamMembers/>
+            <AddCam/>
+            <ListCam/>
         </main>
         </ScrollArea>
         </div>

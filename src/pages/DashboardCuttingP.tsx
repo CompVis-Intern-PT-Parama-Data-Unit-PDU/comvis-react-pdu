@@ -22,9 +22,9 @@ export default function CuttingDP() {
             Computer Vision Video Realtime
           </h1>
           <div className="flex space-x-4 my-auto">
-            <CompanyS />
-            <SiteS />
-            <WellS />
+            <CompanyS className="w-[180px]"/>
+            <SiteS className="w-[180px]"/>
+            <WellS className="w-[180px]"/>
           </div>
         </nav>
         <Separator className="bg-sidebar-primary" />
