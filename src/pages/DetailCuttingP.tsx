@@ -1,4 +1,6 @@
+import { NavLink } from "react-router-dom";
 import { Download, SquareArrowLeft } from "lucide-react";
+import { VideoPlayer } from "@/components/video-player"
 import { VerticalChart } from "@/components/vertical-chart";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { DatePicker } from "@/components/ui/date-picker";
@@ -16,11 +18,7 @@ export default function DetailCuttingP() {
         <div className="flex flex-col w-fit max-w-min min-w-fit xl:grow max-h-full ml-auto mr-2">
           <div className="my-2">
             <AspectRatio ratio={2 / 1} className="w-full bg-white">
-              <img
-                src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80"
-                alt="sasa"
-                className="w-full h-full"
-              />
+              <VideoPlayer src="http://localhost:8000/live/test/index.m3u8" className="w-full" autoPlay />
             </AspectRatio>
           </div>
           <Card className="rounded-b-xl rounded-t-none h-full">
@@ -32,8 +30,10 @@ export default function DetailCuttingP() {
                     Showing amount percent of cutting at shale shaker
                   </CardDescription>
                   <Button>
+                  <NavLink to="/dashboard/cutting-monitoring">
                     <SquareArrowLeft />
                     Back to Menu
+                  </NavLink>
                   </Button>
                 </div>
               </div>

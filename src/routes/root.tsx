@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import DashboardL from "@/layout/DashboardL";
 import { ThemeProvider } from "@/components/theme-provider";
-import { ProtectedRoute } from "@/components/protected-provider";
+// import { ProtectedRoute } from "@/components/protected-provider";
 import { RootBoundary } from "@/lib/rootBoundary";
 import UnderConstruct from "@/pages/UnderConstruction";
 import LoginForm from "@/pages/AuthP";
@@ -9,7 +9,7 @@ import DashboardP from "@/pages/DashboardMainP";
 import CuttingDP from "@/pages/DashboardCuttingP";
 import DetailCuttingP from "@/pages/DetailCuttingP";
 import UserManagement from "@/pages/UserManagement";
-import { loginAction } from "@/services/authServices";
+// import { loginAction } from "@/services/authServices";
 
 const router = createBrowserRouter(
   [
@@ -21,7 +21,7 @@ const router = createBrowserRouter(
         </ThemeProvider>
       ),
       errorElement:<RootBoundary />,
-      action: loginAction,
+      // action: loginAction,
       // loader: async () => {
       //   try {
       //     const response = await fetch('http://localhost:3001/api/auth/verify', {
@@ -39,9 +39,9 @@ const router = createBrowserRouter(
       path: "dashboard",
       element: (
         <ThemeProvider>
-          <ProtectedRoute>
+          {/* <ProtectedRoute> */}
           <DashboardL />
-          </ProtectedRoute>
+          {/* </ProtectedRoute> */}
         </ThemeProvider>
       ),
       children: [
